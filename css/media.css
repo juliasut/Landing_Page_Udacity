@@ -1,0 +1,12 @@
+@media only screen and (max-width: 375px) {
+  .landing__container {
+    flex-direction: column;
+  }
+
+  .image {
+    height: 30vh;
+    width: 100%;
+  }
+
+}
+
