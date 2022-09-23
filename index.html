@@ -1,5 +1,6 @@
-<!DOCTYPE >
+<!DOCTYPE>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +8,13 @@
   <title>PinkPink</title>
   <!-- Load Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;900&display=swap" rel="stylesheet">
   <!-- Load Styles -->
   <link href="css/styles.css" rel="stylesheet">
+  <link href="css/media.css" rel="stylesheet">
 </head>
+
 <body>
   <!-- HTML Follows BEM naming conventions 
   IDs are only used for sections to connect menu achors to sections -->
@@ -23,40 +26,74 @@
   </header>
   <main>
     <header class="main__hero">
-      <h1>Landing Page </h1>
+      <h1>PinkPink<span class="pink">.</span> </h1>
     </header>
     <!-- Each Section has an ID (used for the anchor) and 
     a data attribute that will populate the li node.
     Adding more sections will automatically populate nav.
     The first section is set to active class by default -->
-    <section id="section1" data-nav="Section 1" class="your-active-class">
+    <section id="section1" data-nav="PinkPink" class="your-active-class">
       <div class="landing__container">
-        <h2>Section 1</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
-
-        <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
+        <div class="image">
+          <!-- <img src="/assets/images/hero.png" alt="Cozy bright living room"> -->
+        </div>
+        <div class="landing__container-description">
+          <h3 class="pink">QUALITY DESIGN FOR ALL</h3>
+          <h1>we create spaces,
+            <br>
+            build dreams and
+            <br>
+            shape environments<span class="pink">.</span>
+          </h1>
+          <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim
+            velit mollit. </p>
+          <h3>EXPLORE OUR PRODUCTS</h3>
+        </div>
       </div>
     </section>
-    <section id="section2" data-nav="Section 2">
+    <section id="section2" data-nav="Showcase">
       <div class="landing__container">
-        <h2>Section 2</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
-
-        <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
+        <h2>Explore our exclusive design showcase.</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra
+          elit. Integer nec libero venenatis libero ultricies molestie
+          semper in tellus. Sed congue et odio sed euismod.</p>
       </div>
     </section>
-    <section id="section3" data-nav="Section 3">
+    <section id="section3" data-nav="How we do it">
+      <div class="landing__container">
+        <h2>Explore our exclusive design showcase.</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra
+          elit. Integer nec libero venenatis libero ultricies molestie
+          semper in tellus. Sed congue et odio sed euismod.</p>
+      </div>
+    </section>
+    <section id="section4" data-nav="Our projects">
       <div class="landing__container">
         <h2>Section 3</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
-
-        <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
+        <p>Vestibulum fermentum consectetur
+          porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p> 
       </div>
     </section>
+    <section id="section5" data-nav="Testimonials">
+      <div class="landing__container">
+        <h2>Section 3</h2>
+        <p>Vestibulum fermentum consectetur
+          porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p> 
+      </div>
+    </section>
+    <section id="section6" data-nav="Subscribe">
+      <div class="landing__container">
+        <h2>Section 3</h2>
+        <p>Vestibulum fermentum consectetur
+          porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p> 
+      </div>
+    </section>
+
   </main>
   <footer class="page__footer">
     <p>&copy Udacity</p>
   </footer>
 
 </body>
+
 </html>
