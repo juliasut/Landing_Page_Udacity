@@ -1,0 +1,26 @@
+.page__header {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  justify-content: space-between;
+  
+}
+
+#navbar__list {
+  text-align: right;
+  display: flex;
+  align-self: flex-end;
+  justify-content: space-between;
+  width: 40em;
+}
+
+#navbar__list li {
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 30px;
+}
+
+.navbar__menu .menu__link:hover {
+  color: var(--font-accent-color);
+  transition: ease 0.3s all;
+  }
