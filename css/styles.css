@@ -1,114 +1,162 @@
-@import url("nav.css");
+@import url('nav.css');
+@import url('media.css');
 /*
   CSS Reset based on Josh Comeau's guide
   https://www.joshwcomeau.com/css/custom-css-reset/
 */
 
-*, *::before, *::after {
-    box-sizing: border-box;
-  }
-  
-  * {
-    margin: 0;
-  }
-  
-  html, body {
-    height: 100%;
-  }
-  
-  body {
-    -webkit-font-smoothing: antialiased;
-  }
-  
-  img, picture, video, canvas, svg {
-    display: block;
-    max-width: 100%;
-  }
-  
-  input, button, textarea, select {
-    font: inherit;
-  }
-  
-  p, h1, h2, h3, h4, h5, h6 {
-    overflow-wrap: break-word;
-  }
-  
-  a, a:hover, a:focus, a:active {
-    text-decoration: none;
-    color: inherit;
-  }
-  
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* End of CSS custom reset */
-  
-  
-  /* Declare global variables */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
-  :root {
-    --main-font-family: 'Source Sans Pro', sans-serif;
-    --main-bg-color: #FFFFFF;
-    --secondary-bg-color: rgba(109, 4, 48, 0.05);
-    --ternary-bg-color: rgba(10, 4, 60, 0.02);
-    --font-main-color: #102A42;
-    --font-accent-color: #EB5296;
-    --border-radius: 30px;
-  }
+* {
+  margin: 0;
+}
 
-  /* General layout */
+html,
+body {
+  height: 100%;
+}
 
-  body {
-    background-color: var(--main-bg-color);
-    color: var(--font-main-color);
-    font-family: var(--main-font-family);
-    font-weight: 400;
-    padding: 15px 30px;
-    display: flex;
-    flex-direction: column;
-  }
+body {
+  -webkit-font-smoothing: antialiased;
+}
 
-  .landing__container {
-    display: flex;
-    flex-direction: row;
-    border-radius: var(--border-radius);
-    /* to make border-radius work on div: set overflow to hidden */
-    overflow: hidden;
-    margin-top: 30px;
-    background-color: var(--secondary-bg-color);
-  }
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
 
-  .landing__container-description {
-    background-color: var(--secondary-bg-color);
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-    padding: 20px;
-  }
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
 
-  .image {
-    width: 85%;
-    background-image: url("/assets/images/hero.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-  }
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
 
-  .pink {
-    color: var(--font-accent-color)
-  }
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
 
-  .logo {
-    font-weight: 900;
-    font-size: 24px;
-    line-height: 30px;
-    letter-spacing: -0.2;
-  }
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
 
-  .logo:hover {
-    color: var(--font-accent-color);
-    transition: ease 0.3s all;
-  }
+/* End of CSS custom reset */
+
+/* Declare global variables */
+
+:root {
+  --main-font-family: 'Source Sans Pro', sans-serif;
+  --main-bg-color: #ffffff;
+  --main-bg-color-dark:  #6D0430;
+  --secondary-bg-color: rgba(109, 4, 48, 0.05);
+  --ternary-bg-color: rgba(10, 4, 60, 0.02);
+  --font-main-color: #102a42;
+  --font-accent-color: #eb5296;
+  --border-radius: 30px;
+}
+
+/* General layout */
+
+body {
+  background-color: var(--main-bg-color);
+  color: var(--font-main-color);
+  font-family: var(--main-font-family);
+  font-weight: 400;
+  padding: 15px 67px;
+  display: flex;
+  flex-direction: column;
+}
+
+.landing__container {
+  display: flex;
+  flex-direction: row;
+  border-radius: var(--border-radius);
+  /* to make border-radius work on div: set overflow to hidden */
+  overflow: hidden;
+  margin-top: 30px;
+  background-color: var(--secondary-bg-color);
+}
+
+.landing__container-description {
+  background-color: var(--secondary-bg-color);
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  padding: 130px 40px;
+}
+
+.image {
+  width: 50%;
+  background-image: url('/assets/images/hero.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.pink {
+  color: var(--font-accent-color);
+}
+
+.logo {
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: -0.2;
+}
+
+.logo:hover {
+  color: var(--font-accent-color);
+  transition: ease 0.3s all;
+}
+
+.landing__container-description h2 {
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 22px;
+  letter-spacing: 6px;
+}
+
+.landing__container-description h1 {
+  font-weight: 600;
+  font-size: 55px;
+  line-height: 66px;
+  letter-spacing: -1px;
+}
+
+.landing__container-description h3 {
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 22px;
+  letter-spacing: 4px;
+  margin-top: 25px;
+}
+
+.landing__container-description p {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 28px;
+}
