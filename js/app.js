@@ -18,15 +18,29 @@
  */
 const navContainer = document.querySelector('#navbar__list');
 const sections = [...document.querySelectorAll('section')];
+const panels = [...document.querySelectorAll('.panel')];
 /**
  * End Global Variables
  * Start Helper Functions
  */
 
+function removeActiveClasses() {
+  panels.forEach(panel => {
+    panel.classList.remove('active');
+  })
+}
+
 /**
  * End Helper Functions
  * Begin Main Functions
  */
+
+ panels.forEach((panel) => {
+  panel.addEventListener('click', () => {
+    removeActiveClasses();
+    panel.classList.add('active');
+  });
+});
 
 // build the nav
 function buildNav() {

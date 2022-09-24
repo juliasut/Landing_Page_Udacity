@@ -1,5 +1,6 @@
-@import url('nav.css');
 @import url('media.css');
+@import url('nav.css');
+@import url('showcase.css');
 /*
   CSS Reset based on Josh Comeau's guide
   https://www.joshwcomeau.com/css/custom-css-reset/
@@ -71,7 +72,7 @@ ul {
 :root {
   --main-font-family: 'Source Sans Pro', sans-serif;
   --main-bg-color: #ffffff;
-  --main-bg-color-dark:  #6D0430;
+  --main-bg-color-dark: #6d0430;
   --secondary-bg-color: rgba(109, 4, 48, 0.05);
   --ternary-bg-color: rgba(10, 4, 60, 0.02);
   --font-main-color: #102a42;

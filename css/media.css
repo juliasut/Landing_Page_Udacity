@@ -1,8 +1,9 @@
 @media only screen and (max-width: 375px) {
 
-  /* html, body {
+  html, body {
     overflow-x: hidden;
-  } */
+    padding: 10px;
+  }
 
   .landing__container {
     flex-direction: column;
@@ -11,6 +12,19 @@
   .image {
     height: 30vh;
     width: 100%;
+  }
+
+  .panel:nth-of-type(1),
+  .panel:nth-of-type(2) {
+    display: none;
+  }
+  
+  .panel {
+    flex: 1;
+  }
+
+  .panel__description {
+    opacity: 1;
   }
 
 }

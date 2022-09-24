@@ -1,0 +1,72 @@
+.showcase__container {
+
+}
+
+.showcase__container-panels{
+  display: flex;
+  gap: 20px;
+}
+
+.panel {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 600px;
+  border-radius: 15px;
+  cursor: pointer;
+  flex: 0.35;
+  position: relative;
+  transition: flex 0.7s ease-in;
+}
+
+.panel1 {
+  background-image: url("/assets/images/spacejoy-1.png");
+}
+
+.panel2 {
+  background-image: url("/assets/images/spacejoy-2.png");
+}
+.panel3 {
+  background-image: url("/assets/images/spacejoy-3.png");
+}
+
+.panel.active:hover {
+  flex: 0.6;
+}
+
+.panel__description {
+  background-color: var(--main-bg-color);
+  border-radius: 10px;
+  padding: 15px;
+  position: absolute;
+  bottom: 14px;
+  left: 12px;
+  width: 85%;
+  opacity: 0;
+}
+
+.panel.active .panel__description {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+
+.showcase__container h2 {
+  font-weight: 600;
+  font-size: 42;
+  line-height: 50.5px;
+  letter-spacing: -1;
+}
+
+.showcase__container h4 {
+  font-weight: 600;
+  font-size: 32;
+  line-height: 42px;
+  letter-spacing: -1;
+}
+
+.showcase__container h6 {
+  font-weight: 600;
+  font-size: 13;
+  line-height: 22px;
+  letter-spacing: 4;
+}
