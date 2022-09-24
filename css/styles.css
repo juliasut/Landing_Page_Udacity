@@ -81,6 +81,9 @@ ul {
 }
 
 /* General layout */
+html {
+  scroll-behavior: smooth;
+ }
 
 body {
   background-color: var(--main-bg-color);
