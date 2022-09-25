@@ -45,6 +45,10 @@ function buildNav() {
       navItemLink.setAttribute('href', `#${section.id}`);
       navItemLink.setAttribute('class', 'menu__link');
       navItemLink.innerHTML = `${section.dataset.nav}`;
+      navItemLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        section.scrollIntoView({ behavior: 'smooth' });
+      });
       navItem.append(navItemLink);
       navContainer.appendChild(navItem);
     }
@@ -52,7 +56,7 @@ function buildNav() {
 }
 
 // Add class 'active' to section when near top of viewport
-function activeNavLink() {
+function makeActive() {
   for (let section of sections) {
     let box = section.getBoundingClientRect();
     let navLink = document.querySelector(`[href="#${section.id}"]`);
@@ -100,7 +104,8 @@ panels.forEach((panel) => {
 document.addEventListener('DOMContentLoaded', buildNav);
 
 // Scroll to section on link click
-window.addEventListener('scroll', scrollSectionsIntoView);
 
 // Set sections as active
-document.addEventListener('scroll', activeNavLink);
+document.addEventListener('scroll', makeActive);
+
+window.addEventListener('scroll', scrollSectionsIntoView);
