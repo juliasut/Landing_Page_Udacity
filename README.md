@@ -14,3 +14,15 @@ The starter project from Udacity had some HTML and CSS styling to display a stat
 ## Get Started
 
 Open `index.html` in your browser.
+
+## Responsive
+
+
+https://user-images.githubusercontent.com/81769855/192142102-a85e4ab2-518a-4dc4-badc-ce2bff7abd5e.mov
+
+
+
+## Full Screen
+
+https://user-images.githubusercontent.com/81769855/192142097-48dfcc66-29ed-459f-b5fd-e0db922952c9.mov
+
