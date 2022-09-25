@@ -62,11 +62,19 @@ function makeActive() {
     let box = section.getBoundingClientRect();
     let navLink = document.querySelector(`[href="#${section.id}"]`);
     if (box.top < 300 && box.bottom > window.innerHeight * 0.4) {
-      navLink.classList.add('active');
-      section.classList.add('active');
+      try {
+        navLink.classList.add('active');
+        section.classList.add('active');
+      } catch (e) {
+        console.log(e);
+      }
     } else {
-      navLink.classList.remove('active');
-      section.classList.remove('active');
+      try {
+        navLink.classList.remove('active');
+        section.classList.remove('active');
+      } catch (e) {
+        console.log('e', e);
+      }
     }
   }
 }
