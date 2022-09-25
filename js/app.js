@@ -1,4 +1,4 @@
-/**
+/*
  * Manipulating the DOM exercise.
  * Exercise programmatically builds navigation,
  * scrolls to anchors from navigation,
@@ -8,19 +8,19 @@
  * JS Standard: ESlint
  */
 
-/**
+/*
  * Comments should be present at the beginning of each procedure and class.
  * Great to have comments before crucial code sections within the procedure.
  */
 
-/**
+/*
  * Define Global Variables
  */
 const navContainer = document.querySelector('#navbar__list');
 const sections = [...document.querySelectorAll('section')];
 const panels = [...document.querySelectorAll('.panel')];
 
-/**
+/*
  * End Global Variables
  * Start Helper Functions
  */
@@ -31,7 +31,7 @@ function removeActiveClasses() {
   });
 }
 
-/**
+/*
  * End Helper Functions
  * Begin Main Functions
  */
@@ -46,21 +46,29 @@ function buildNav() {
       navItemLink.setAttribute('class', 'menu__link');
       navItemLink.innerHTML = `${section.dataset.nav}`;
       navItem.append(navItemLink);
-      navItem.classList.add('active')
       navContainer.appendChild(navItem);
     }
   }
 }
 
 // Add class 'active' to section when near top of viewport
+function activeNavLink() {
+  for (let section of sections) {
+    let box = section.getBoundingClientRect();
+    let navLink = document.querySelector(`[href="#${section.id}"]`);
+    if (box.top < 300 && box.bottom > window.innerHeight * 0.4) {
+      navLink.classList.add('active');
+      section.classList.add('active');
+    } else {
+      navLink.classList.remove('active');
+      section.classList.remove('active');
+    }
+  }
+}
 
-
-
-
-
-function scrollSections() {
+function scrollSectionsIntoView() {
   // calculate an approx trigger point for a new section to come into view during scroll
-  const triggerScrollPoint = window.innerHeight / 5 * 4;
+  const triggerScrollPoint = (window.innerHeight / 5) * 4;
 
   sections.forEach((section) => {
     const sectionTop = section.getBoundingClientRect().top;
@@ -81,10 +89,9 @@ panels.forEach((panel) => {
   });
 });
 
-
 // Scroll to anchor ID using scrollTO event
 
-/**
+/*
  * End Main Functions
  * Begin Events
  */
@@ -93,7 +100,7 @@ panels.forEach((panel) => {
 document.addEventListener('DOMContentLoaded', buildNav);
 
 // Scroll to section on link click
-window.addEventListener('scroll', scrollSections);
+window.addEventListener('scroll', scrollSectionsIntoView);
 
 // Set sections as active
 document.addEventListener('scroll', activeNavLink);

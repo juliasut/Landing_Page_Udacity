@@ -90,9 +90,10 @@ body {
   color: var(--font-main-color);
   font-family: var(--main-font-family);
   font-weight: 400;
-  padding: 15px 67px;
+  padding: 0 67px;
   display: flex;
   flex-direction: column;
+  height: auto;
 }
 
 .landing__container {
