@@ -19,15 +19,16 @@
 const navContainer = document.querySelector('#navbar__list');
 const sections = [...document.querySelectorAll('section')];
 const panels = [...document.querySelectorAll('.panel')];
+
 /**
  * End Global Variables
  * Start Helper Functions
  */
 
 function removeActiveClasses() {
-  panels.forEach(panel => {
+  panels.forEach((panel) => {
     panel.classList.remove('show');
-  })
+  });
 }
 
 /**
@@ -35,14 +36,7 @@ function removeActiveClasses() {
  * Begin Main Functions
  */
 
- panels.forEach((panel) => {
-  panel.addEventListener('click', () => {
-    removeActiveClasses();
-    panel.classList.add('show');
-  });
-});
-
-// build the nav
+// Build the nav
 function buildNav() {
   for (let section of sections) {
     if (section.id !== 'section1') {
@@ -52,23 +46,54 @@ function buildNav() {
       navItemLink.setAttribute('class', 'menu__link');
       navItemLink.innerHTML = `${section.dataset.nav}`;
       navItem.append(navItemLink);
+      navItem.classList.add('active')
       navContainer.appendChild(navItem);
     }
   }
 }
+
 // Add class 'active' to section when near top of viewport
+
+
+
+
+
+function scrollSections() {
+  // calculate an approx trigger point for a new section to come into view during scroll
+  const triggerScrollPoint = window.innerHeight / 5 * 4;
+
+  sections.forEach((section) => {
+    const sectionTop = section.getBoundingClientRect().top;
+
+    if (sectionTop < triggerScrollPoint) {
+      section.classList.add('in-view');
+    } else {
+      section.classList.remove('in-view');
+    }
+  });
+}
+
+// Expand clicked image in Showcase section
+panels.forEach((panel) => {
+  panel.addEventListener('click', () => {
+    removeActiveClasses();
+    panel.classList.add('show');
+  });
+});
+
 
 // Scroll to anchor ID using scrollTO event
 
 /**
  * End Main Functions
  * Begin Events
- *
  */
 
 // Build menu
 document.addEventListener('DOMContentLoaded', buildNav);
 
 // Scroll to section on link click
+window.addEventListener('scroll', scrollSections);
 
 // Set sections as active
+document.addEventListener('scroll', activeNavLink);

@@ -20,6 +20,10 @@
   line-height: 30px;
 }
 
+#navbar__list li.active {
+background-color: aquamarine;
+}
+
 .navbar__menu .menu__link:hover {
   color: var(--font-accent-color);
   transition: ease 0.3s all;

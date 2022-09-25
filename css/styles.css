@@ -164,3 +164,18 @@ body {
   font-size: 15px;
   line-height: 28px;
 }
+
+section {
+  /* sections positions off screen, 400 for wide screens */
+  transform: translateX(4000px);
+  transition: transform 0.8s ease;
+}
+
+section:nth-of-type(even) {
+  /* every other section will come in view from left */
+  transform: translateX(-4000px);
+}
+
+section.in-view {
+  transform: translateX(0);
+}
