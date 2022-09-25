@@ -84,7 +84,7 @@ ul {
 /* General layout */
 html {
   scroll-behavior: smooth;
- }
+}
 
 body {
   background-color: var(--main-bg-color);
@@ -95,6 +95,7 @@ body {
   display: flex;
   flex-direction: column;
   height: auto;
+  overflow-x: hidden;
 }
 
 .landing__container {
@@ -169,15 +170,19 @@ body {
 
 section {
   /* sections positions off screen, 400 for wide screens */
-  /* transform: translateX(4000px); */
+  transform: translateX(4000px);
   transition: transform 0.8s ease;
 }
 
 section:nth-of-type(even) {
   /* every other section will come in view from left */
-  /* transform: translateX(-4000px); */
+  transform: translateX(-4000px);
 }
 
 section.in-view {
   transform: translateX(0);
+}
+
+.fa {
+  display: none;
 }
