@@ -60,9 +60,10 @@ function buildNav() {
 function makeActive() {
   for (let section of sections) {
     let box = section.getBoundingClientRect();
-    let navLink = document.querySelector(`[href="#${section.id}"]`);
+    
     if (box.top < 300 && box.bottom > window.innerHeight * 0.4) {
       try {
+        let navLink = document.querySelector(`[href="#${section.id}"]`);
         navLink.classList.add('active');
         section.classList.add('active');
       } catch (e) {
@@ -70,6 +71,7 @@ function makeActive() {
       }
     } else {
       try {
+        let navLink = document.querySelector(`[href="#${section.id}"]`);
         navLink.classList.remove('active');
         section.classList.remove('active');
       } catch (e) {
