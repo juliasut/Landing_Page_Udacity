@@ -1,6 +1,7 @@
 @import url('media.css');
 @import url('nav.css');
 @import url('showcase.css');
+@import url('form.css');
 /*
   CSS Reset based on Josh Comeau's guide
   https://www.joshwcomeau.com/css/custom-css-reset/
@@ -119,7 +120,7 @@ body {
   background-image: url('/assets/images/hero.png');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 50% 50%;
+  background-position: center;
 }
 
 .pink {
@@ -168,13 +169,13 @@ body {
 
 section {
   /* sections positions off screen, 400 for wide screens */
-  transform: translateX(4000px);
+  /* transform: translateX(4000px); */
   transition: transform 0.8s ease;
 }
 
 section:nth-of-type(even) {
   /* every other section will come in view from left */
-  transform: translateX(-4000px);
+  /* transform: translateX(-4000px); */
 }
 
 section.in-view {

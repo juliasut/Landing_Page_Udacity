@@ -19,6 +19,7 @@
 const navContainer = document.querySelector('#navbar__list');
 const sections = [...document.querySelectorAll('section')];
 const panels = [...document.querySelectorAll('.panel')];
+let userNameInput = document.querySelector('#username');
 
 /*
  * End Global Variables
@@ -93,8 +94,6 @@ panels.forEach((panel) => {
   });
 });
 
-// Scroll to anchor ID using scrollTO event
-
 /*
  * End Main Functions
  * Begin Events
@@ -103,9 +102,14 @@ panels.forEach((panel) => {
 // Build menu
 document.addEventListener('DOMContentLoaded', buildNav);
 
-// Scroll to section on link click
-
 // Set sections as active
 document.addEventListener('scroll', makeActive);
 
+// Animate sections coming into view on scroll
 window.addEventListener('scroll', scrollSectionsIntoView);
+
+// Alert user upon successful form submission
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  alert(`Thank you for subscribing ${userNameInput.value}!`);
+});
