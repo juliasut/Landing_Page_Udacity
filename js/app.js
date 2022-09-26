@@ -17,6 +17,7 @@
  * Define Global Variables
  */
 const navContainer = document.querySelector('#navbar__list');
+const navToggle = document.querySelector('.mobile-nav-toggle');
 const sections = [...document.querySelectorAll('section')];
 const panels = [...document.querySelectorAll('.panel')];
 let userNameInput = document.querySelector('#username');
@@ -60,7 +61,7 @@ function buildNav() {
 function makeActive() {
   for (let section of sections) {
     let box = section.getBoundingClientRect();
-    
+
     if (box.top < 300 && box.bottom > window.innerHeight * 0.4) {
       try {
         let navLink = document.querySelector(`[href="#${section.id}"]`);
@@ -102,6 +103,21 @@ panels.forEach((panel) => {
     removeActiveClasses();
     panel.classList.add('show');
   });
+});
+
+// Toggle navigation for smaller screens
+navToggle.addEventListener('click', () => {
+  const visibility = navContainer.getAttribute('data-visible');
+
+  if (visibility === 'false') {
+    navContainer.setAttribute('data-visible', 'true');
+    navToggle.classList.remove('fa-bars');
+    navToggle.classList.add('fa-times');
+  } else {
+    navContainer.setAttribute('data-visible', 'false');
+    navToggle.classList.remove('fa-times');
+    navToggle.classList.add('fa-bars');
+  }
 });
 
 /*
