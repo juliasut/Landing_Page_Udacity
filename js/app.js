@@ -105,11 +105,11 @@ panels.forEach((panel) => {
   });
 });
 
-// Toggle navigation for smaller screens
-navToggle.addEventListener('click', () => {
-  const visibility = navContainer.getAttribute('data-visible');
+// Toggle navigation visibility for smaller screens
+function toggleNavVisibility() {
+  const navVisibility = navContainer.getAttribute('data-visible');
 
-  if (visibility === 'false') {
+  if (navVisibility === 'false') {
     navContainer.setAttribute('data-visible', 'true');
     navToggle.classList.remove('fa-bars');
     navToggle.classList.add('fa-times');
@@ -118,7 +118,7 @@ navToggle.addEventListener('click', () => {
     navToggle.classList.remove('fa-times');
     navToggle.classList.add('fa-bars');
   }
-});
+}
 
 /*
  * End Main Functions
@@ -139,3 +139,9 @@ form.addEventListener('submit', (e) => {
   e.preventDefault();
   alert(`Thank you for subscribing ${userNameInput.value}!`);
 });
+
+// Mobile menu hides on click
+navContainer.addEventListener('click', toggleNavVisibility);
+
+// Mobile menu closes by clicking on a close icon
+navToggle.addEventListener('click', toggleNavVisibility);
