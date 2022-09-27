@@ -53,7 +53,7 @@
     transition: transform 350ms ease-out;
   }
 
-  #navbar__list[data-visible="true"] {
+  #navbar__list[data-visible='true'] {
     transform: translateX(0);
   }
 
@@ -77,7 +77,7 @@
   }
 }
 
-@media only screen and (min-width: 375px) {
+@media only screen and (min-width: 376px) {
   .mobile-nav-toggle {
     display: none;
   }
